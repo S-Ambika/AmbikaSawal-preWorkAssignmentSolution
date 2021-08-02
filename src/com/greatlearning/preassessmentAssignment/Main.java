@@ -3,25 +3,65 @@ package com.greatlearning.preassessmentAssignment;
 import java.util.Scanner;
 
 public class Main {
-
+int userInput;
 	Scanner sc = new Scanner(System.in);
 
 	// function to checkPalindrome
 
 	public void checkPalindrome() {
+		 int reverse,sum=0,temp; 
+		   System.out.println("Enter the number to check whether it is palindrome or not");    
 
+userInput=sc.nextInt();		  
+		  temp=userInput;    
+		  while(userInput>0){    
+			  reverse=userInput%10;  
+		   sum=(sum*10)+reverse;    
+		   userInput=userInput/10;    
+		  }    
+		  if(temp==sum)    
+		   System.out.println("This is a palindrome number "+"\n");    // add extra line to show options in clear manner
+		  else    
+		   System.out.println("This is not a palindrome number"+"\n");    
+		
 	}
 
 	// function to printPattern
 
 	public void printPattern() {
-
+		
+		  System.out.println("Enter the number to print pattern");    
+           userInput=sc.nextInt();		
+		  
+		  for (int i = userInput; i >= 1; i--)   
+		  {  
+		  for (int j = 1; j <= i; j++)  
+		  {  
+		  System.out.print("*");  
+		  }  
+		  System.out.println();  
+		  }  
 	}
 
 	// function to check no is prime or not
 
 	public void checkPrimeNumber() {
+		 System.out.println("Enter the number to check whether it is prime or not");    
+            userInput=sc.nextInt();	
+            boolean flag = false;
+            for (int i = 2; i <= userInput / 2; ++i) {
+              if (userInput % i == 0) {
+                flag = true;
+                break;
+              }
+            }
 
+           
+		    if (!flag)
+		      System.out.println("This is a prime number."+"\n");
+		    else
+		      System.out.println("This is not a prime number."+"\n");
+		  
 	}
 
 	// function to print Fibonacci Series
@@ -29,8 +69,21 @@ public class Main {
 	public void printFibonacciSeries() {
 
 		// initialize the first and second value as 0,1 respectively.
-
+		 System.out.println("Enter the number to print Fibonacci Series");    
+         userInput=sc.nextInt();		
+		  
 		int first = 0, second = 1;
+		 int check;    
+		 System.out.print(first); 
+		    
+		 for(int i=2;i<userInput;++i)  
+		 {    
+			 check=first+second;    
+		  System.out.print(" "+check);    
+		  first=second;    
+		  second=check;    
+		 }    
+		  System.out.println();    
 
 	}
 
