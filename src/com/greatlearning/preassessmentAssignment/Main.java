@@ -32,18 +32,17 @@ public class Main {
 
 		System.out.println("Enter the number to print pattern");
 		userInput = sc.nextInt();
-if(userInput>0) {
-		for (int i = userInput; i >= 1; i--) {
-			for (int j = 1; j <= i; j++) {
-				System.out.print("*");
+		if (userInput > 0) {
+			for (int i = userInput; i >= 1; i--) {
+				for (int j = 1; j <= i; j++) {
+					System.out.print("*");
+				}
+				System.out.println();
 			}
-			System.out.println();
-		}
-}
-else {
-	System.out.println("Please enter valid number");
+		} else {
+			System.out.println("Please enter valid number" + "\n");
 
-}
+		}
 	}
 
 	// function to check no is prime or not
@@ -75,20 +74,19 @@ else {
 		userInput = sc.nextInt();
 		int first = 0, second = 1;
 		int check;
-		if(userInput>0) {
-		
-		System.out.print(first+" "+second);
+		if (userInput > 0) {
 
-		for (int i = 2; i < userInput; ++i) {
-			check = first + second;
-			System.out.print(" " + check);
-			first = second;
-			second = check;
-		}
-		System.out.println();
-		}
-		else {
-			System.out.println("Please enter valid number");
+			System.out.print(first + " " + second);
+
+			for (int i = 2; i < userInput; ++i) {
+				check = first + second;
+				System.out.print(" " + check);
+				first = second;
+				second = check;
+			}
+			System.out.println();
+		} else {
+			System.out.println("Please enter valid number" +"\n");
 
 		}
 	}
